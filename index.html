@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        background: white;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+      }
+      #canvas {
+        width: 90vw;
+        height: 90vh;
+        border: 1px solid black;
+      }
+      header {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vh;
+        background-color: transparent;
+      }
+      header section {
+        text-align: center;
+        background-color: white;
+        padding: 1rem;
+      }
+      header section > * {
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <section>
+        <h1 id="title">Conway's game of life</h1>
+        <h2 id="subtitle">Click anywhere to generate a board</h2>
+      </section>
+    </header>
+    <canvas id="canvas"></canvas>
+    <script src="./game-of-life.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
