@@ -126,10 +126,11 @@ function GameOfLife(...args) {
         if (i === rowIndex && j === columnIndex) {
           continue;
         }
-        if (this.state[i] === undefined || this.state[i][j] === undefined) {
-          continue;
-        }
-        count += this.state[i][j] === LIVE_CELL ? 1 : 0;
+
+        wi = (i + this.state.length) % this.state.length;
+        wj = (j + this.state[0].length) % this.state[0].length;
+
+        count += this.state[wi][wj] === LIVE_CELL ? 1 : 0;
       }
     }
 
